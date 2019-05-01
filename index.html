@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Hide/Show Fields</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+  <style id="compiled-css" type="text/css">
+      form {
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
+}
+
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    window.onload=function(){
+      
+$("#question_1").change(function() {
+  if ($(this).val() == "1st off") {
+    $('#h1_group').show();
+    $('#h1_box_A').attr('required', '');
+    $('#h1_box_B').attr('data-error', 'This field is required.');
+    $('#h2_group').show();
+    $('#h2_box_A').attr('required', '');
+    $('#h2_box_B').attr('data-error', 'This field is required.');
+    $('#h3_group').show();
+    $('#h3_box_A').attr('required', '');
+    $('#h3_box_B').attr('data-error', 'This field is required.');
+    $('#L1_group').show();
+    $('#L1_box_A').attr('required', '');
+    $('#L1_box_B').attr('data-error', 'This field is required.');
+
+
+
+
+  } else if ($(this).val() == "Last off") {
+    $('#h1_group').show();
+    $('#h1_box_A').attr('required', '');
+    $('#h1_box_B').attr('data-error', 'This field is required.');
+    $('#h2_group').show();
+    $('#h2_box_A').attr('required', '');
+    $('#h2_box_B').attr('data-error', 'This field is required.');
+    $('#h3_group').show();
+    $('#h3_box_A').attr('required', '');
+    $('#h3_box_B').attr('data-error', 'This field is required.');
+    $('#L1_group').show();
+    $('#L1_box_A').attr('required', '');
+    $('#L1_box_B').attr('data-error', 'This field is required.');
+
+
+  } else if ($(this).val() == "In Progress") {
+    $('#h2_group').hide();
+    $('#h2_box_A').removeAttr('required');
+    $('#h2_box_B').removeAttr('data-error');
+    $('#h3_group').hide();
+    $('#h3_box_A').attr('required', '');
+    $('#h3_box_B').attr('data-error', 'This field is required.');
+    $('#L1_group').hide();
+    $('#L1_box_A').attr('required', '');
+    $('#L1_box_B').attr('data-error', 'This field is required.');
+
+  }
+});
+$("#question_1").trigger("change");
+
+
+    }
+
+</script>
+
+</head>
+<body>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfHu8QmEXlpr3741SK5rGjXNjPX8wXCrQbKvMk8TfYOyDY6uQ/formResponse">
+
+
+
+  <form class="p-3">
+    <div class="form-group">
+      <label for="name">Works order No.</label>
+      <input name="entry.631111635" type="text" class="form-control" id="name" placeholder="C123456/1 ">
+    </div>
+
+
+    <form class="p-3">
+      <div class="form-group">
+        <label for="name">Operation</label>
+        <input name="entry.285242097" type="text" class="form-control" id="name" placeholder="CNC, Bench, etc.... ">
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="frequency">frequency</label>
+        <select class="form-control" id="question_1" name="entry.147818746">
+          <option value="1st off">1st Off.</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Last off">Last Off</option>
+    </select>
+      </div>
+
+
+
+
+      <div class="form-group" id="h1_group">
+        <div class="row">
+          <div class="col-6">
+            <label for="h1_BOX_A">H1 : Nominal</label>
+            <input name="entry.981755706" type="text" class="form-control w-100" id="otherField1" placeholder="Value on job card">
+          </div>
+          <div class="col-6">
+            <label for="h1_BOX_B">H1 : Actual</label>
+            <input name="entry.1269149836" type="text" class="form-control w-100" id="otherField2" placeholder="Value measured">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" id="h2_group">
+        <div class="row">
+          <div class="col-6">
+            <label for="h2_box_A">H2 : Nominal</label>
+            <input name="entry.1219762443" type="text" class="form-control w-100" id="otherField1" placeholder="Value on job card">
+          </div>
+          <div class="col-6">
+            <label for="h2_box_B">H2 : Actual</label>
+            <input name="entry.1975701267" type="text" class="form-control w-100" id="otherField2" placeholder="Value measured">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" id="h3_group">
+        <div class="row">
+          <div class="col-6">
+            <label for="h3_BOX_A">H3 : Nominal</label>
+            <input name="entry.2013318784" type="text" class="form-control w-100" id="otherField1" placeholder="Value on job card">
+          </div>
+          <div class="col-6">
+            <label for="h3_BOX_B">H3 : Actual</label>
+            <input name="entry.461830273" type="text" class="form-control w-100" id="otherField2" placeholder="Value measured">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" id="L1_group">
+        <div class="row">
+          <div class="col-6">
+            <label for="L1_BOX_A">L1 : Nominal</label>
+            <input name="entry.1844026628" type="text" class="form-control w-100" id="otherField1" placeholder="Value on job card">
+          </div>
+          <div class="col-6">
+            <label for="L1_BOX_B">L1 : Actual</label>
+            <input name="entry.648639023" type="text" class="form-control w-100" id="otherField2" placeholder="Value measured">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comments/Questions</label>
+        <textarea class="form-control" id="comments" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "1bdjavgf"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+</body>
+</html>
